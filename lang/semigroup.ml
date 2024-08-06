@@ -43,3 +43,13 @@ let pair_list = [{ x = 1; y = 2 }; { x = 3; y = 4 }; { x = 5; y = 6 }]
 let () =
   let result = combine_all (module PairSemigroup) pair_list in
   Printf.printf "Pair result: { x = %d; y = %d }\n" result.x result.y
+
+let dup (type a) (items: a list) : (a list) =
+  List.append items items
+
+let dump items =
+  Printf.printf "[%s]\n" (String.concat "; " (List.map string_of_int items))
+
+
+let () =
+  dump (dup int_list)
