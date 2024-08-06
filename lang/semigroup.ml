@@ -45,7 +45,8 @@ let () =
   Printf.printf "Pair result: { x = %d; y = %d }\n" result.x result.y
 
 let dup (type a) (items: a list) : (a list) =
-  List.append items items
+  (* List.append items items *)
+  items @ items
 
 let dump (items) =
   Printf.printf "[%s]\n" (String.concat "; " (List.map string_of_int items))
