@@ -37,6 +37,7 @@ module PairSemigroup : SEMIGROUP with type t = pair = struct
   let combine p1 p2 = { x = p1.x + p2.x; y = p1.y + p2.y }
 end
 
+(* type inference via how pair_list is passed to a function below *)
 let pair_list = [{ x = 1; y = 2 }; { x = 3; y = 4 }; { x = 5; y = 6 }]
 
 let () =
