@@ -2,6 +2,8 @@
 module type SEMIGROUP = sig
   type t
   val combine : t -> t -> t
+  (* operator must be associative too*)
+  (* parallelizing operation b/c associative *)
 end
 
 (* Create a semigroup module for integers under addition *)
