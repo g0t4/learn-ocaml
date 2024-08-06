@@ -47,7 +47,7 @@ let () =
 let dup (type a) (items: a list) : (a list) =
   List.append items items
 
-let dump items =
+let dump (items) =
   Printf.printf "[%s]\n" (String.concat "; " (List.map string_of_int items))
 
 
